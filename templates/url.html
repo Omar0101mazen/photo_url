@@ -1,0 +1,32 @@
+{% block body %}
+<style>
+    body {
+        background-color: #0a7dc0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    p {
+        color: white;
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<div class="row">
+    {% if file_url %}
+        <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+            <p class="url">
+                ULR : <a href="{{ file_url }}">{{ file_url }}</a>
+            </p>
+        </div>
+    {% else %}
+        <p>No photo added</p>    
+    {% endif %}    
+</div>
+{% endblock body %}
